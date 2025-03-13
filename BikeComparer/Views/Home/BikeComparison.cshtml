@@ -1,0 +1,411 @@
+﻿@model BikeComparer.Models.BikeComparisonViewModel
+
+@{
+    ViewData["Title"] = "BikeComparison";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="~/Content/bikes.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/Content/SiteBase.css" rel="stylesheet" asp-append-version="true" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Detaljerade specifikationer om valda motorcyklar | Bikecomparer" />
+    <meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon" />
+</head>
+<form name="BikeFormComparison" asp-controller="Home" asp-action="Comparison" method="get" class="BikesContentRight areaMargin shadow">
+    <table class="">
+        <tr>
+            <td style="height:auto;">
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td style="width250px;alignCenter">
+                    <img src="@Model.BikeComparisonList[i].ImgPath" alt="@Model.BikeComparisonList[i].imgName" />
+                </td>
+            }
+        </tr>
+        <tr class="tblCompareRowOne">
+            <td class="headerStyle">
+                Modell
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].FullName
+                </td>
+            }
+        </tr>
+        <tr class="tblCompareRowOne">
+            <td class="headerStyle" >
+                År
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].FirstYear
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Kategori
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].BikeCategory
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Motor
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].Engine
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Ram
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].Frame
+            </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Fjädring fram
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].FrontSuspension
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Fjädring Bak
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].RearSuspension
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Bromsar fram
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].FrontBrakes
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Bromsar bak
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].RearBrakes
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Däck fram
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].FrontTyre
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Däck bak
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].RearTyre
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Växellåda
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].Gearbox
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Drivning
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].FinalDrive
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Koppling
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].Clutch
+                </td>
+            }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                ABS/Avstängningsbar
+            </td>
+            @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+            {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].ABS_disconnectable
+                </td>
+            }
+        <tr>
+            <td class="headerStyle">
+                Traction control/justerbar
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].TC_adjustabletable
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Valbara motormappar
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].EngineMaps
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Wheelie control
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].WheelieControl
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Drivning
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].LaunchControl
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Aktiv fjädring
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].DynamicDamping
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Torrvikt
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].DryWeight
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Fulltankad vikt
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].WetWeight
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Hjulbas
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].WheelBase
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Sadelhöjd
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].SeatHeight
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Gaffelvinkel
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].Rake
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Försprång
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].Trail
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Tankvolym/reserv
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].FuelCapacityAndReserv
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Toppfart
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].TopSpeed
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                0-400 meter
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].StandingFourHundredMetersSeconds
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Garanti
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].Warranty
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Serviceintervall
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].ServiceInterval
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Ventilkontroll
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].ValveCheckInterval
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Färg
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].Color
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Generalagent
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                    @Model.BikeComparisonList[i].GeneralAgent
+                </td>
+                }
+        </tr>
+        <tr>
+            <td class="headerStyle">
+                Pris
+            </td>
+                @for (int i = 0; i < Model.BikeComparisonList.Count; i++)
+                {
+                <td class="width250px" style="width250px;">
+                        @Model.BikeComparisonList[i].Price
+                </td>
+                }
+        </tr>
+    </table>
+</form>

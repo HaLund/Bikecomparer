@@ -1,0 +1,342 @@
+﻿@model IEnumerable<BikeComparer.Models.BikeComparisonViewModel>
+
+@{
+    ViewData["Title"] = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Test</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.McId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImgPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imgName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Engine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bore_X_stroke)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PeekpowerReev)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TorqueAtReev)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Compression)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartSystem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FuelingSystem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gearbox)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FinalDrive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clutch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DryWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WetWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WheelBase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SeatHeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rake)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FuelCapacityAndReserv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Warranty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceInterval)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValveCheckInterval)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Frame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrontSuspension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RearSuspension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrontBrakes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RearBrakes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrontTyre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RearTyre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ABS_disconnectable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TC_adjustabletable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngineMaps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TCisStandard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WheelieControl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LaunchControl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DynamicDamping)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TopSpeed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZeroToHundredSeconds)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZeroToTwoHundredSeconds)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StandingFourHundredMetersSeconds)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StandingThousandMeterSeconds)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrakingDistanceHundredToZero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WebpageSweden)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WebpageGlobal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeneralAgent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatesForThisYear)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.McId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImgPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.imgName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Engine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bore_X_stroke)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PeekpowerReev)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TorqueAtReev)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Compression)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartSystem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FuelingSystem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gearbox)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalDrive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clutch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DryWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WetWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WheelBase)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeatHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rake)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FuelCapacityAndReserv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Warranty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceInterval)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValveCheckInterval)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Frame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrontSuspension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RearSuspension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrontBrakes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RearBrakes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrontTyre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RearTyre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ABS_disconnectable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TC_adjustabletable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EngineMaps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TCisStandard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WheelieControl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LaunchControl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DynamicDamping)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopSpeed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZeroToHundredSeconds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZeroToTwoHundredSeconds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StandingFourHundredMetersSeconds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StandingThousandMeterSeconds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrakingDistanceHundredToZero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebpageSweden)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebpageGlobal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeneralAgent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatesForThisYear)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,301 @@
+﻿@model BikeComparer.Models.BikeDataBasicViewModel
+
+@{
+    ViewData["Title"] = "BikeComparerBasic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/css/bikes.css" asp-append-version="true" />
+    <style>
+        table 
+        {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tr {
+            border: solid;
+            border-width: 1px 0;
+        }
+
+            tr:nth-child(even) {
+                background-color: #F2F2F2;
+                color: #333333;
+            }
+    </style>
+   
+    <script type="text/javascript">
+         window.onload = defaultSettings;
+
+        function hideShowYearPrice() 
+        {
+            var bikeRange = document.getElementById("YearRange").value;
+            if (bikeRange == "3") {
+                document.getElementById("divYearFrom").style.display = "block";
+                document.getElementById("divYearTo").style.display = "block";
+                document.getElementById("divPriceFrom").style.display = "none";
+                document.getElementById("divPriceTo").style.display = "none";
+            }
+            else 
+            {
+                document.getElementById("divPriceFrom").style.display = "block";
+                document.getElementById("divPriceTo").style.display = "block";
+                document.getElementById("divYearFrom").style.display = "none";
+                document.getElementById("divYearTo").style.display = "none";
+            }
+        }
+
+        function defaultSettings() 
+        {
+            document.getElementById("divPriceFrom").style.display = "block";
+            document.getElementById("divPriceTo").style.display = "block";
+            document.getElementById("divYearFrom").style.display = "none";
+            document.getElementById("divYearTo").style.display = "none";
+            document.getElementById("btnCompare").style.display = "none";
+        }
+
+        function toogleBtnCompareVisibility()
+        {
+            var count=0;
+            var checkboxes = document.getElementsByName('BikesToCompare');
+            checkboxes.forEach((item) => {
+                count += item.checked ? 1 : 0;
+                if(count > 0)
+                {
+                    if (count > 1) {
+                        document.getElementById("btnCompare").style.display = "block";
+                    }
+                    else {
+                        document.getElementById("btnCompare").style.display = "none";
+                    }
+                    if (count > 4) {
+                        alert("Du kan max jämföra 4 motorcyklar samtidigt.");
+                        item.checked = false;
+                        count--;
+                    }
+                }
+        })
+        }
+    </script>
+</head>
+<form name="BikeFormIndex" asp-controller="Home" asp-action="Index" method="get">
+    <div class="BikesContent areaMargin shadow background">
+    <h1 class="textAlignCenter" style="color:#3A4F63;">Jämför motorcyklar</h1>
+    <p>
+        <div class="textAlignCenter"><h3>Sök bland alla motorcyklar på den svenska marknaden.</h3></div>
+    </p>
+    <fieldset>
+        <legend>
+            <h3>Allmänt</h3>
+        </legend>       
+        <ul style="background-color: #fff">
+            <li>
+                <select asp-for="YearRange" onclick="hideShowYearPrice()" class="CategoryDropDown" asp-items="Model.YearRangeList"></select>
+            </li>
+            <li>
+                    <select asp-for="BikeCategory" class="CategoryDropDown" asp-items="@(new SelectList(Model.bikeCategoryList, nameof(BikeCategoryDto.Id), nameof(BikeCategoryDto.Name)))"></select>
+            </li>
+            <li>
+                    <select asp-for="BikeBrandId" class="CategoryDropDown" asp-items="@(new SelectList(Model.bikeBrandList, nameof(BikeBrandDto.Id), nameof(BikeBrandDto.Name)))"></select>
+            </li>
+            <li>
+                <div id="divPriceFrom">
+                    <select asp-for="PriceFrom" class="CategoryDropDown" asp-items="Model.PriceRangeFromList"></select>
+                </div>
+            </li>
+            <li>
+                <div id="divPriceTo">
+                    <select asp-for="PriceTo" class="CategoryDropDown" asp-items="Model.PriceRangeToList"></select>
+                </div>
+            </li>
+            <li>
+                <div id="divYearFrom">
+                    <select asp-for="YearFrom" class="CategoryDropDown" asp-items="Model.YearFromList"></select>
+                </div>
+            </li>
+            <li>
+                <div id="divYearTo">
+                    <select asp-for="YearTo" class="CategoryDropDown" asp-items="Model.YearToList"></select>
+                </div>
+            </li>
+        </ul>
+    </fieldset>
+        <div class="paddingTop10px">
+            <fieldset>
+                <legend>
+                    <h3>Motor</h3>
+                </legend>
+                <ul style="background-color: #fff">
+                    <li class="divSafety">
+                    <select asp-for="EngineCapacityFrom" class="CategoryDropDown" asp-items="Model.EngnneCapacityFromList"></select>
+                    </li>
+                    <li class="divSafety">
+                        <select asp-for="EngineCapacityTo" class="CategoryDropDown" asp-items="Model.EngineCapacityToList"></select>
+                    </li>
+                    <li class="divSafety">
+                        <select asp-for="PowerFrom" class="CategoryDropDown" asp-items="Model.PowerFromList"></select>
+                    </li>
+                    <li class="divSafety">
+                        <select asp-for="PowerTo" class="CategoryDropDown" asp-items="Model.PowerToList"></select>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+        <div class="paddingTop10px">
+            <fieldset>
+            <legend>
+                <h3>Säkerhet</h3>
+            </legend>
+                <ul style="background-color: #fff; color: #3A4F63;">
+                <li>
+                    <div class="divSafety">
+                        ABS<br />
+                        <select asp-for="ABS" class="SafetyDropDown" asp-items="Model.SafetyEquipmentList"></select>
+                    </div>
+                </li>
+                <li>
+                    <div class="divSafety">
+                        Traction control<br />
+                        <select asp-for="TractionControl" class="SafetyDropDown" asp-items="Model.SafetyEquipmentList"></select>
+                    </div>
+                </li>
+                <li>
+                    <div class="divSafety">
+                        Rider modes<br />
+                                <select asp-for="RiderModes" class="SafetyDropDown" asp-items="Model.SafetyEquipmentList"></select>
+                    </div>
+                </li>
+                <li>
+                    <div class="divSafety">
+                        Active suspension<br />
+                        <select asp-for="ActiveSuspension" class="SafetyDropDown" asp-items="Model.SafetyEquipmentList"></select>
+                    </div>
+                </li>
+                <li>
+                    <div class="divSafety">
+                        Wheelie control<br />
+                        <select asp-for="WheelieControl" class="SafetyDropDown" asp-items="Model.SafetyEquipmentList"></select>
+                    </div>
+                </li>
+                <li>
+                    <div class="divSafety">
+                        Launch controll<br />
+                        <select asp-for="LaunchControl" class="SafetyDropDown" asp-items="Model.SafetyEquipmentList"></select>
+                    </div>
+                </li>
+            </ul>
+        </fieldset>
+        </div>
+        <div class="paddingTop10px">
+            <table cellspacing="0" cellpadding="0" border="0" style="width:100px;border:hidden;">
+                <tr>
+                    <td>
+                        <input type="submit" id="btnSearch" name="btnSearch" value="Sök" class="button" style="float:left;" />
+                    </td>
+                    <td>
+                        <input type="submit" id="btnCompare" name="btnCompare" value="Jämför" class="button" style="float:right;" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="paging" id="divPagingTop">
+            <button type="submit" name="btnGroupPaging" title="Första" class="btnPaging" value="FirstPage"><img src="~/Images/Icons/firstPage.gif" /></button>
+            <button type="submit" name="btnGroupPaging" title="Föregående" class="btnPaging" value="PreviousPage"><img src="~/Images/Icons/previousPage.gif" /></button>
+             @{
+                var items = ViewBag.Items as List<SelectListItem>;
+            }
+            @Html.DropDownList("listPages", items, "Gå till sida", new { onchange = "BikeFormIndex.submit()" })
+            <button type="submit" name="btnGroupPaging" title="Nästa" class="btnPaging" value="NextPage"><img src="~/Images/Icons/nextPage.gif" /></button>
+            <button type="submit" name="btnGroupPaging" title="Sista" class="btnPaging" value="LastPage"><img src="~/Images/Icons/lastPage.gif" /></button>
+        </div>
+   </div>
+    <table class="tblHeaderBikes">
+        <thead>
+            <tr>
+                <th class="verticalAlignCenter headerColumn1"></th>
+                <th class="verticalAlignCenter headerColumn2">Jämför</th>
+                <th class="verticalAlignCenter headerColumn3">Modell</th>
+                <th class="verticalAlignCenter headerColumn4">År</th>
+                <th class="verticalAlignCenter headerColumn5">Kategori</th>
+                <th class="verticalAlignCenter headerColumn6">Motor</th>
+                <th class="verticalAlignCenter headerColumn7">Chassie</th>
+                <th class="verticalAndTextAlignCenter headerColumn8">Pris</th>
+            </tr>
+        </thead>
+        <tbody style="background-color: #fff;">
+            @foreach(var item in Model.BikeDataBasicList)
+            {
+                <tr>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id"><img src="@item.ImgUrl" alt="Bild saknas" class="responsive" /></a>
+                        <button type="submit" asp-action="Details" asp-route-id="@item.Id" id="Id" name="Id" value="@item.Id" class="button">Detaljer</button> @* src="Details?Id=@item.Id" *@
+                    </td>
+                    <td class="textAlignCenter">
+                        <input type="checkbox" class="number" id="BikesToCompare" name="BikesToCompare" value="@item.Id" onclick="toogleBtnCompareVisibility()" />
+                    </td>
+                    <td>
+                        @item.ModelNameShort
+                    </td>
+                    <td>
+                        @item.FirstYear - @item.FinalYear
+                    </td>
+                    <td>
+                        @item.BikeCategory
+                    </td>
+                    <td>
+                        @item.Engine
+                        @* @item.Strokes -takt, @item.CylinderConfiguration, @item.Capacity cc, @item.EngineType, @item.Power hk/@item.PeekPowerReev rpm *@
+                    </td>
+                    <td>
+                        @if (item.DryWeight != null)
+                        {
+                            @:Torrvikt: @item.DryWeight kg
+                        }
+                        else if(item.DryWeight != null)
+                        {
+                            @:Våtvikt: @item.WetWeight kg
+                        }
+                        else
+                        {
+                            @:Vikt: -
+                        }
+                        <br />
+                        @if(item.Wheelbase != null)
+                        {
+                            @:Hjulbas: @item.Wheelbase mm
+                        }
+                        else
+                        {
+                            @:Hjulbas: -
+                        }
+                        <br />
+                        @if(item.FuelCapacity != null)
+                        {
+                            @:Tankvolym: @item.FuelCapacity liter
+                        }
+                        else
+                        {
+                           @:Tankvolym: -
+                        }
+                    </td>
+                    <td>
+                        @if(item.Price != null)
+                        {
+                            @item.Price
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @* <div class="paging" id="divPagingTop">
+        <button type="submit" name="btnGroupPaging" title="Första" class="btnPaging" value="FirstPage"><img src="~/Images/Icons/firstPage.gif" /></button>
+        <button type="submit" name="btnGroupPaging" title="Föregående" class="btnPaging" value="PreviousPage"><img src="~/Images/Icons/previousPage.gif" /></button>
+        @{
+            var items2 = ViewBag.Items as List<SelectListItem>;
+        }
+        @Html.DropDownList("listPages2", items2, "Gå till sida", new { onchange = "BikeFormIndex.submit()" })
+        <button type="submit" name="btnGroupPaging" title="Nästa" class="btnPaging" value="NextPage"><img src="~/Images/Icons/nextPage.gif" /></button>
+        <button type="submit" name="btnGroupPaging" title="Sista" class="btnPaging" value="LastPage"><img src="~/Images/Icons/lastPage.gif" /></button>
+    </div> *@
+</form>

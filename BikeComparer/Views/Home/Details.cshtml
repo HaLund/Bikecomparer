@@ -1,0 +1,431 @@
+﻿@model BikeComparer.Models.BikeDetailsViewModel
+
+@{
+    ViewData["Title"] = "BikeDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="~/Content/bikes.css" rel="stylesheet" asp-append-version="true" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="description" content="Detaljerad specifikation om vald motorcykel | Bikecomparer" />
+    <meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon" />
+
+    <style>
+        .galleria {
+            height: 300px;
+            width: 100%;
+            min-width: 300px;
+            background: #000;
+        }
+    </style>
+</head>
+<form name="BikeFormDetails" asp-controller="Home" asp-action="Details" method="get">
+    <div class="BikesContentRight areaMargin shadow">
+    <table>
+        <tr>
+            <td id="bikesContentInnerLeft" style="vertical-align:top;">
+            <h2>
+                @Model.FullName
+            </h2>
+                @Model.UpdatesForThisYear
+                <div class="galleria">
+                    @foreach (var item in Model.files)
+                    {
+                        <div>
+                            <img src='@Html.DisplayFor(modelItem => item.src)'
+                                    title='@Html.DisplayFor(modelItem => item.title)' alt="">
+                        </div>
+                    }
+                </div>
+            </td>
+            <td id="bikesContentInnerRight">
+
+            </td>
+        </tr>
+    </table>
+    <div>
+        <h2 class="h2BikeDetails">Tekniska data</h2>
+    </div>
+    <table id="tblBike">
+        <tr class="bikeDetialsSectionHeadersBackground">
+            <td colspan="2" class="bikeDetailsSectionHeaders">
+                <div>Motor</div>
+            </td>
+            <td class="bikeDetailsChassie" colspan="2">
+                <div>Chassi</div>
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Typ
+            </td>
+            <td>
+                @Model.Engine
+            </td>
+            <td class="tblBikeRightColumn">
+                Ram
+            </td>
+            <td>
+                @Model.Frame
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Borrning x slag
+            </td>
+            <td>
+                @Model.Bore_X_stroke
+            </td>
+            <td class="tblBikeRightColumn">
+                Fjädring fram
+            </td>
+            <td>
+                @Model.FrontSuspension
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Slagvolym
+            </td>
+            <td>
+                @Model.Capacity
+            </td>
+            <td class="tblBikeRightColumn">
+                Fjädring bak
+            </td>
+            <td>
+                @Model.RearSuspension
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Effekt/varv
+            </td>
+            <td>
+                @Model.PeekpowerReev
+            </td>
+            <td class="tblBikeRightColumn">
+                Bromsar fram
+            </td>
+            <td>
+                @Model.FrontBrakes
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Vridmoment/varv
+            </td>
+            <td>
+                @Model.TorqueAtReev
+            </td>
+            <td class="tblBikeRightColumn">
+                Bromsar bak
+            </td>
+            <td>
+                @Model.RearBrakes
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Kompression
+            </td>
+            <td>
+                @Model.Compression
+            </td>
+            <td class="tblBikeRightColumn">
+                Framdäck
+            </td>
+            <td>
+                @Model.FrontTyre
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Startsystem
+            </td>
+            <td>
+                @Model.StartSystem
+            </td>
+            <td class="tblBikeRightColumn">
+                Bakdäck
+            </td>
+            <td>
+                @Model.RearTyre
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Bränslesystem
+            </td>
+            <td>
+                @Model.FuelingSystem
+            </td>
+        </tr>
+        <tr class="bikeDetialsSectionHeadersBackground">
+            <td colspan="2" class="bikeDetailsSectionHeaders">
+                Kraftöverföring
+            </td>
+            <td colspan="2" class="bikeDetailsSectionHeaders">
+                Säkerhet
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Växellåda
+            </td>
+            <td>
+                @Model.Gearbox
+            </td>
+            <td class="tblBikeRightColumn">
+                ABS / Avstägningsbar
+            </td>
+            <td>
+                @Model.ABS_disconnectable
+                <asp:Label ID="lblABS" runat="server" Text=""></asp:Label>
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Drivning
+            </td>
+            <td>
+                @Model.FinalDrive
+            </td>
+            <td class="tblBikeRightColumn">
+                Traction C./justerbar
+            </td>
+            <td>
+                @Model.TC_adjustabletable
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Koppling
+            </td>
+            <td>
+                @Model.Clutch
+            </td>
+            <td class="tblBikeRightColumn">
+                Traction C. standard
+            </td>
+            <td>
+                @Model.TCisStandard
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn"></td>
+            <td></td>
+            <td class="tblBikeRightColumn">
+                Valbara motormappar
+            </td>
+            <td>
+                @Model.EngineMaps
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn"></td>
+            <td></td>
+            <td class="tblBikeRightColumn">
+                Wheelie Control
+            </td>
+            <td>
+                @Model.WheelieControl
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn"></td>
+            <td></td>
+            <td class="tblBikeRightColumn">
+                Launch Control
+            </td>
+            <td>
+                @Model.LaunchControl
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn"></td>
+            <td></td>
+            <td class="tblBikeRightColumn">
+                Aktiv fjädring
+            </td>
+            <td>
+                @Model.DynamicDamping
+            </td>
+        </tr>
+        <tr class="bikeDetialsSectionHeadersBackground">
+            <td colspan="2" class="bikeDetailsSectionHeaders">
+                Mått & vikt
+            </td>
+            <td colspan="2" class="bikeDetailsSectionHeaders">
+                Prestanda
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Torrvikt
+            </td>
+            <td>
+                @Model.DryWeight
+            </td>
+            <td class="tblBikeRightColumn">
+                Toppfart
+            </td>
+            <td>
+                @Model.TopSpeed
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Fulltankad vikt
+            </td>
+            <td>
+                @Model.WetWeight
+            </td>
+            <td class="tblBikeRightColumn">
+                0-100 km/t
+            </td>
+            <td>
+                @Model.ZeroToHundredSeconds
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Hjulbas
+            </td>
+            <td>
+                @Model.WheelBase
+            </td>
+            <td class="tblBikeRightColumn">
+                0-200 km/t
+            </td>
+            <td>
+                @Model.ZeroToTwoHundredSeconds
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Sadelhöjd
+            </td>
+            <td>
+                @Model.SeatHeight
+            </td>
+            <td class="tblBikeRightColumn">
+                0-400 meter
+            </td>
+            <td>
+                @Model.StandingFourHundredMetersSeconds
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Gaffelvinkel
+            </td>
+            <td>
+                @Model.Rake
+            </td>
+            <td class="tblBikeRightColumn">
+                0-1000 meter
+            </td>
+            <td>
+                @Model.StandingThousandMeterSeconds
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Försprång
+            </td>
+            <td>
+                @Model.Trail
+            </td>
+            <td class="tblBikeRightColumn">
+                Bromssträcka 100 km/h-0
+            </td>
+            <td>
+                @Model.BrakingDistanceHundredToZero
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Tankvolym/reserv
+            </td>
+            <td>
+                @Model.FuelCapacityAndReserv
+            </td>
+            <td class="tblBikeRightColumn"></td>
+            <td></td>
+        </tr>
+        <tr class="bikeDetialsSectionHeadersBackground">
+            <td colspan="2" class="bikeDetailsSectionHeaders">
+                Service intervall & garantier
+            </td>
+            <td colspan="2" class="bikeDetailsSectionHeaders">
+                Pris mm
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Garanti
+            </td>
+            <td>
+                @Model.Warranty
+            </td>
+            <td class="tblBikeRightColumn">
+                Rek. pris
+            </td>
+            <td>
+                @Model.Price
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td class="tblBikeLeftColumn">
+                Serviceintervall
+            </td>
+            <td>
+                @Model.ServiceInterval
+            </td>
+            <td class="tblBikeRightColumn">
+                Färg
+            </td>
+            <td>
+                @Model.Color
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentOddRows">
+            <td class="tblBikeLeftColumn">
+                Ventilkontroll
+            </td>
+            <td>
+                @Model.ValveCheckInterval
+            </td>
+            <td class="tblBikeRightColumn">
+                Generalagent
+            </td>
+            <td>
+                @Model.GeneralAgent
+            </td>
+        </tr>
+        <tr class="bikeDetailsContentEvenRows">
+            <td></td>
+            <td></td>
+            <td class="tblBikeRightColumn">
+                Hemsida svensk/global
+            </td>
+            <td>
+                <a style="color:blue" src="@Model.WebpageSweden">@Model.WebpageSweden</a>
+                /
+                <a style="color:blue" src="@Model.WebpageGlobal">@Model.WebpageGlobal</a>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+    <script>
+        (function() {
+                Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
+                Galleria.run('.galleria');
+            }());
+    </script>
+</form>

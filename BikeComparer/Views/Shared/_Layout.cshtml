@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="~/css/SiteBase.css" asp-append-version="true" />
+    <link rel="shortcut icon" type="image/png" href="~/Images/Icons/icon196x196.png" />
+   @*  <link rel="shortcut icon" sizes="196x196" href="../Images/Icons/icon196x196.png" /> *@
+    <link rel="apple-touch-icon" href="../Images/Icons/icon196x196.png" />
+    <link rel="stylesheet" href="~/css/StyleSheet1.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+   @*  <script>
+        $(document).ready(function () {
+            $("#width").val() = $(window).width();
+            $("#height").val() = $(window).height();
+        });
+    </script> *@
+    <meta charset="utf-8"/>
+    <meta name="description"
+    content="Jämför motorcyklar på nätet. Sök bland alla motorcyklar på den svenska marknaden." />
+    <meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon, motorcykellexikon"/>
+</head>
+<body style="overflow: scroll;">
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    @section Scripts {
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    xfbml: true,
+                    version: 'v3.0'
+                });
+            };
+        </script>
+        <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    }
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+    </script>
+        }
+    <div class="page">
+        <div style="margin-left:5px;">
+            <partial name="_CookieConsentPartial" style="margin:5px;" class="cookies" />
+        </div>
+    <div class="header">
+        <div>
+            <div style="float:left;">
+                <div style="float:left;">
+                    <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/icons/71x48.png" /></a>
+                </div>
+                <div style="float:right;">
+                    <h1>BikeComparer.com</h1>
+                </div>
+            </div>
+            <div style="float:right;">
+                <table style="float:right; border:none;" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <div style="float:right;"><a href="https://twitter.com/bikecomparer?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Följ bikecomparer</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+                        </td> 
+                             <td> 
+                             <div style="float:right;background-color:wheat;" class="fb-like" data-href="https://www.facebook.com/bikecomparer/" data-width="" data-show-faces="false" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+                        </td>
+                    </tr>
+                </table> 
+            </div>
+
+                <img alt="banner" src="~/Images/banner.png" class="banner" />
+                <div id="NavigationMenu" class="menu" style="float: left;">
+                    <ul class="level1 static" style="background-color:#3A4F63; position: relative; width: auto; float: left;" role="menubar">
+                        <li class="static" role="menuitem" style="position: relative; float: left;">
+                            <a asp-area="" asp-controller="Home" style="color:white;" asp-action="Index">Hem</a>
+                        </li >
+                        <li class="static" role="menuitem" style="position: relative; float: left;">
+                            <a href="Help.aspx"><span style="color:white">Hjälp</span></a>
+                        </li>
+                    </ul>
+        </div>
+    </div>
+    <div style="float:right;margin-right:-175px;text-align:center;font-weight:bold;color:#337ab7;">
+                <a href="https://id.dackonline.se/t/t?a=1280643134&as=1640879705&t=2&tk=1&url=https://www.dackonline.se/Motorcykeldack.html" target="_blank"><img src="~/Images/Icons/dackonline.png" /></a><img src="https://id.dackonline.se/t/t?a=1280643134&as=1640879705&t=1&tk=1&i=1" width="1" height="1" border="0">
+    </div>
+    <div style="float:right;margin-right:-180px;margin-top:50px;">
+        <b>
+            <a href="https://track.adtraction.com/t/t?a=1060519344&as=1640879705&t=2&tk=1" target="_blank">
+                <br />
+                <img src="~/Images/Icons/Lendo2.png" />
+            </a>
+        </b><img src="https://track.adtraction.com/t/t?a=1060519344&as=1640879705&t=1&tk=1&i=1" width="1" height="1" border="0" />
+    </div>
+
+    <div style="float:right;margin-right:-175px;margin-top:165px;text-align:center;">
+        <a href="https://tc.tradetracker.net/?c=24965&amp;m=1407251&amp;a=411715&amp;r=&amp;u=" target="_blank" rel="sponsored nofollow"><img src="https://ti.tradetracker.net/?c=24965&amp;m=1407251&amp;a=411715&amp;r=&amp;t=html" width="1" height="1" border="0" alt="" /><img src="~/Images/Icons/carfax.png" /></a>
+    </div>
+    <div class="main">
+        <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    </div>
+    <div class="clear">
+    </div>
+    </div>
+    <footer class="border-top3 footer text-muted3">
+        <div class="container">
+            &copy; 2025 - BikeComparer - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    </div>
+</body>
+</html>

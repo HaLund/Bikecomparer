@@ -1,0 +1,6 @@
+Motorcyklarna är indelade i femton olika kategorier. I Hojdatabasen ingår en motorcykel alltid i en (varken mer eller mindre) kategori. En del motorcyklar kan passa in i mer än en kategori, 
+i dessa fall är den kategori vald som bäst stämmer in på modellen i fråga. 
+När man klickar på en modell kommer man till en landningssida, till höger om bilden på motorcykeln på denna landningssida visas exempel på jämbördiga motorcyklar. Ett exempel; klickar man 
+på Yamaha R1-M så visas bl.a. Ducati Panigale 1299-S i listan över liknande motorcyklar. Klickar man däremot på basmodellen av Yamaha R1 så visas basmodellen av Panigale 1299 i listan över 
+liknande motorcyklar.
+     

@@ -1,0 +1,11 @@
+Användaruppgifter webbplats:
+hanneslundin@hotmail.com
+Ross....
+Användaruppgifter FTP:
+IP-adress: 93.90.145.28
+Värdnamn: ftp01.crystone.se
+
+Användaruppgifter databas:
+2015095_tw64145
+Ross....
+Webbplats: https://hojdatabasen-2015095.mylittleadmin.crystone.se/

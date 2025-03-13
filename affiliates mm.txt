@@ -1,0 +1,306 @@
+Här är jag nu:
+Inga ändringar har skett med mc under 2020, detta pga pandemin. Försök att få till Google adsense på sajten.
+Vänta på att Google meddelar (via mail?) om sajten godkänts eller inte för AdSense.
+Har mailat Bike om hur man kan köpa Bikekatalogen 2021. Avvakta svar.
+-Den är slutsåld. Bike finns dock på Readly ("Bike powered by Motorrad").
+har tagit bort adSensekoden från masterpage och lagt in den på varje sida i .com-domänen.
+Härnäst; vänta en timme för att ändringarna ska träda i kraft på Crystones server, välj sedan "Begär granskning" i Google adesense-loginet.
+Sedan bör annonser börja dyka upp på .com-domänen. Om det gör det, fortsätt med att föra in alla 2021-års nyheter i databasen.
+
+har valt "begär granskning" på mitt Google AdSense-konto, hade missat det steget innan annonser kan börja synas. Det kan ta 
+upp till en timme innan det är i drift. Om det inte funkar, lägg koden i headern på varje sida i -com-domänen, kanske inte 
+funkar att lägga den i Masterpage, där den ligger nu.
+Har lagt till Google Analytics (igen).
+Har bytt ut dack-online.com affiliaten mot dackonline.se. Anledningen var att bannern för dack-online var gigantisk, 
+vilket känns "påträngande" på sidan, dessutom tog bannern lång tid att ladda. Dessutom känns dackonline-sajten mer "svensk",
+vilket känns possitivt på .se-domänen. Dessutom kan man länka direkt till mc-sessionen från dackonline.se-domänen, vilket
+bör höja CTP mycket, då det känns mycket mer relevant.
+har lagt till Google Adsense på .com-domänen, genom att lägga in en kodsnutt i BikesEn.Master-sidan.
+Det kan ta upp till en timme innan annsoner börjar visas. Annonserna kommer nu att visas var som helst?
+Det finns dock något som heter Adesens AMP, då lägger man in en kod i både headern samt i bodyn. Detta ska göra att 
+Google automatiskt på bästa platsen (precis som "vanliga" adsense), men dessutom ska den visa annonser skräddarsytt
+på optimala tider osv. Anatar att det är just det som skiljer AMS mot vanliga AdSense? Avvakta och se vart annonserna
+hamner nu. Om det är ok, låt det vara. Annars, aktivera AMP.
+
+De tre nuvarande affilates räcker nu till en början. Lägg även till en adSense på -com domänen. .Se-domänen har redan
+tre affiliatelänkar. En fjärde annons riskerar att trötta ut användaren som blir "bombarderad" av annonser. Framför allt
+då AdSense ibland kan ge reklam om orelevanta ämnen. Dessutom behövs det väldigt många visningar för att det ska ge
+något ekonomiskt. Affiliates är mycket mer lönsamt (om det är relevanta annonser). En sajt visade exempel där de per år
+tjänade $6000/år i adSense med en enda affiliate gav $430000/år. På en sida kan man se hur mycket man potentiellt kan 
+tjäna på AdSense (Upprättat av Google själva), inom kategorin "Bilar och fordon" inom området "Europa, Mellanöstern och 
+Afrika" så tjänar man årligen $3366, alltså ca 30000 kr/år, om man har 50000 sidvisningar per MÅNAD.
+
+Längre fram; många affiliates-företag har kampanjer. Även Amazon samt ebay. Då dessa relativt fort blir inaktuella så
+är det ingen ide' att satsa på de nu. Gör det efter att alla hojar 2021 samt 2022 finns i databasen.
+Sammanfattat;
+* Lägg till dack-online.se, Lendo samt Carfax som affiliates på .se-domänen KLAR
+* Lägg till en AdSense på .com-domänen
+* Lägg in 2021 samt 2022 års nyheter i databasen
+* Finslipa alla annonser; storlek, text osv. Lägg till kampanjaffiliates i form av Ebay mm.
+* Lägg ut leads till sajten; via Facebookgrupper, Sporthoj.com osv.
+
+lösenord crystone webmail YHt52Tr2
+Login TradeTracker: 
+http://bikecomparer.com/se/bikes.aspx
+Ross...
+Facebook-länken funkar ej längre. Fixa?
+Anslut dig till nedan affaliates. 
+Efter det, anslut dig till Amazon-affilates, både för .com samt .se-domänen.
+Efter det, anslut dig till ebay, både för svenska samt .com-domänen.
+Efter det, lägg in 2021 års modeller i databasen.
+.se-domänen:
+Lendo - väntar på bekräftelsemail (adtraction) KLAR
+dack-online.com: väntar på bekräftelsemail( Adraction) KLAR
+carfax.se - (Tradetracker) KLAR
+FC-moto - väntar på bekräftelsemail (Webgains)
+FreedomFinance - istället för Lendo? Mer lönsam? - Nej, Lendi känns mer seriös
+dackonline.se - (adtraction) Har tyvärr väldigt dålig banner och ingen text så väljer dack-online.com (nedan).
+Svedea - hur ofta tecknar folk en försäkring..? Tar upp annonsplats. Folk tycker det är jobbigt med reklam. Avvaktar med 
+denna.
+Sportamore - känns inte så relevant på en mc-sajt. Försök att enbart ha direktrelaterad reklam.
+
+.com-domänen:
+carfax.com
+fc-moto (finns det en "internationell" landningssida?)
+
+Obs: nytt lösenord
+Hur många affiliates ska jag har på svenska sidorna? - 6 st
+På de globala sidorna? - 6 st
+strategi: bäst betalande affiliates längst upp på sidorna. Om två affiliates betalar lika mycket, ta den som är mest 
+relevant för sajtens besökare generellt.
+Försäljningsaffilatiates bör vara bättre än tex sign-up affliates, för man köper ju mycket oftare än man signarup för 
+tex Avanza. Så försäljning av eftertrakatade varor som ger bra provision bör vara det bästa, typ FC-moto? 
+Kan man lägga ut Amazon-annonser som affiltes, dvs få provosion på specifika varor där? I så fall, lägg ut affiliates på 
+de mest eftertraktade prodkterna/produktområdena? Bör vara annonser som säljer väldigt många enheter isf, annars blir
+annonsen snabbt inaktuell?
+-Amazon-affiliates: har rätt Amazon-affliate för rätt marknad, dvs ha Amazon-affiliates för den svenska marknaden på 
+.se-domänen etc
+
+Tänkbara affiliates, svenska:
+https://adtraction.com/se/affiliate#Insurance
+Carfax: 20% per köp för .com-domänen
+Däck:
+dackonline.se 
+Ersättningsnivå: 3% på köpet
+Försäkringsbolag:
+svedea
+Moderna
+Mikrolån?
+Banker/finnans: 
+Sparande: 
+Avanza
+Långivare:
+Lendo, Svea, Coop MedMera Bank, OKQ8, Zmarta - ta den medböst vilkor för kunden?
+Biltema?
+Kanske även ha en avdelning på siten för adsense? Framför allt lämpligt på .com domänen där besökare från allehanda 
+länder kan dyka upp..
+Gemensamt för de nedan är att de är välkända samt har bra rykte:
+svedea: välkända, specialiserat sig på mc försäkringar
+Ersättningsnivå: 100 kr
+Moderna Försäkringar (Bilsport MC)
+Ersättningsnivå: 150 kr (Adtraction)
+Avanza: seriöst sparande, bra rykte
+Ersättningsnivå signup: 120 kr (Adtraction, Adrecord)
+Lendo: en av de allra mest kända långivarna 
+Ersättningsnivå: Lån: 750 kr Företagslån: 3000 kr
+FC-moto
+Ersättningsnivå: 8% provosion på säljbeloppet (Webgains) https://www.webgains.se/front/publisher/program/view/programID/7777
+Sportamore
+Sport och frilusftsplagg. Kanske inte helt relevant, men massor av sportplagg, är nog fler som köper sportkläder än som 
+öppnar konto på Avanza..?
+Ersättningsnivå: 5% på köpbeloppet
+Härnäst: fortsätt kolla på Amazon som affiliates, både hela Amazon samt enskilda annonser där.
+utländska:
+ebay: med mc-tema (kanske finns?) (kanske även på svenska domänen?
+Dessa nätverk innehåller tusentals affiliates, dock måste man registrera sig innan man kan se vilka de är samt provision mm. Gör detta sen när du har lagt ut den första omgåengen
+affiliates på sajten. Nätverken är:
+Awin
+Adtraction
+Tradedoubler
+Adrecord
+Tradetracker
+
+Huvudområden:
+*Företagande (Affiliates, F-skattsedel mm)
+- Behöver ej F-skattsedel/företag för att ha affiliates, bara vid högre intäkter
+- Satsa på Adsense, Affiliates, eller något annat?
+*Sociala medier
+- Forum på Facebook (facebookgrupper)
+- Skicka statusuppdateringar på Facebook och Twitter
+*SEO relaterat för sajten (taggar mm)
+- Ok att slussa användaren till "rätt" språk på sajten beroende på webbläsare?
+- Gör googles test, rätta alla "fel"
+- Gör alla "x-cross" (taggar?) länkar (multilingual)
+*Utveckling av sajten (funktion, form)
+- Ta bort alla sidor som inte används (på servern och i Visual Studio)
+- Sitemap
+- SEO-vänliga rubriker
+- Länk i loggan till Hem
+- Flytta ut all css till stylesheets
+- Större checkboxar för mobiler
+*Forum - synas
+- Sporthoj.com, SMC, forum på Facebook (facebookgrupper) 
+
+Reklam (Fb, Twitter mm)
+Default errorsida, om man tex kommer till bikedetails och inte har ett mcid i url:en, slussa vidare till startsidan
+Google analytics - optimera inställningar för taggning etc
+Adsense mm
+F-skattsedel
+Marknadsföring, frågor;
+Samma domän för svenska och globalt? 
+(Fördelar; bättre seo, nackdelar; kan vara svårt för svenskar att komma ihåg namnet)
+Enligt Google dåligt att omdirigera användare till svenska sidor för svenska besökare osv, är det korrekt?
+
+Egen sökavdelning som heter Snabbköp med följande snabbsökknappar; A1, A2 och elmotorcyklar 
+
+sv:
+bikes:
+Description: Jämför motorcyklar på nätet. Välj bland alla motorcyklar på den svenska markanden.
+Title: Jämför motorcyklar | Bikecomparer
+**
+<Title>Jämför motorcyklar | Bikecomparer</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Jämför motorcyklar på nätet. Sök bland alla motorcyklar på den svenska marknaden." />
+<meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon, motorcykellexikon"/>
+en/bikes:
+<Title>Compare motorcycles | Bikecomparer</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Compare motorcycles side-by-side. Your online bike lexicon." />
+<meta name="keywords" content="bikes, motorbikes, motorcycles, bike lexicon"/>
+bikedetails:
+Description:
+Detaljerad specifikation om vald motorcykel | Bikecomparer
+Title: Specifikationer motorcykel | Bikecomparer
+**
+<Title>Specifikationer motorcykel | Bikecomparer</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Detaljerad specifikation om vald motorcykel | Bikecomparer" />
+<meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon"/>
+bikeDetails/en:
+<Title>Specifications motorcycle | Bikecomparer</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Detailed specifications about selected motorcycle" />
+<meta name="keywords" content="bikes, motorbikes, motorcycles, bike lexicon"/>
+bikedetailscompare:
+Description:
+Detaljerade specifikationer om valda motorcyklar | Bikecomparer
+Title: Specifikationer motorcyklar | Bikecomparer
+**
+<Title>Specifikationer motorcyklar | Bikecomparer</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Detaljerade specifikationer om valda motorcyklar | Bikecomparer" />
+<meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon"/>
+en/bikeDetailsCompare:
+<Title>Specifikacations motorcycles | Bikecomparer</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Detailed specifications of the selected bikes" />
+<meta name="keywords" content="bikes, motorbikes, motorcycles, bike lexicon"/>
+Help:
+<Title>Kategorier motorcyklar | Bikecomparer</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Beskrivning av motorcykelkategorier" />
+<meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon"/>
+en/help:
+<Title>Categories motorcycles | Bikecomparer</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Description of motorcycle categories" />
+<meta name="keywords" content="bikes, motorbikes, motorcycles, bike lexicon"/>
+
+****Gammalt***
+en/bikes:
+<Title>BikeComparer - Select motorcycles to compare</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Compare new and used motorcycles side-by-side on bikecomparer.com." />
+<meta name="keywords" content="bikes, motorbikes, motorcycles, bikelexicon"/>
+se/bikes:
+<Title>BikeComparer - Välj motorcyklar att jämföra</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Jämför nya och gamla motorcyklar på bikecomparer.com." />
+<meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon"/>
+en/bikeDetails:
+<Title>BikeComparer - "Motorcykeln X"</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Displays specs about selected motorcycle on bikecomparer.com." />
+<meta name="keywords" content="bikes, motorbikes, motorcycles, bikelexicon"/>
+se/bikeDetails:
+<Title>BikeComparer - "Motorcykeln X"</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Visar fakta om den valda motorcykeln på bikecomparer.com." />
+<meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon"/>
+en/bikeDetailsCompare:
+<Title>BikeComparer - Compares selected motorcycles</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Compares selected motorcycles on bikecomparer.com." />
+<meta name="keywords" content="bikes, motorbikes, motorcycles, bikelexicon"/>
+se/bikeDetailsCompare:
+<Title>BikeComparer - fakta om de valda motorcyklarna sida vid sida</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Visar fakta om de valda motorcyklarna sida vid sida på bikecomparer.com." />
+<meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon"/>
+en/help:
+<Title>BikeComparer - Instructions how to use the website</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Instructions how to use bikecomparer.com." />
+<meta name="keywords" content="bikes, motorbikes, motorcycles, bikelexicon"/>
+se/help:
+<Title>BikeComparer - Instruktioner hur man använder websajten</Title>
+<meta charset="utf-8"/>
+<meta name="description"
+content="Instruktioner hur man använder bikecomparer.com." />
+<meta name="keywords" content="hojar, motorcyklar, motorcykel, bikelexicon"/> 
+
+Huvudområden:
+*Företagande (Affiliates, F-skattsedel mm)
+- Behöver ej F-skattsedel/företag för att ha affiliates, bara vid högre intäkter
+- Satsa på Adsense, Affiliates, eller något annat?
+*Sociala medier
+- Forum på Facebook (facebookgrupper)
+- Skicka statusuppdateringar på Facebook och Twitter
+*SEO relaterat för sajten (taggar mm)
+- Ok att slussa användaren till "rätt" språk på sajten beroende på webbläsare?
+- Gör googles test, rätta alla "fel"
+- Gör alla "x-cross" (taggar?) länkar (multilingual)
+*Utveckling av sajten (funktion, form)
+- Ta bort alla sidor som inte används (på servern och i Visual Studio)
+- Sitemap
+- SEO-vänliga rubriker
+- Länk i loggan till Hem
+- Flytta ut all css till stylesheets
+- Större checkboxar för mobiler
+*Forum - synas
+- Sporthoj.com, SMC, forum på Facebook (facebookgrupper) 
+
+Google analytics:
+Denna kod ska vara placerad längst upp i headern på varje sida för att Google anlytics ksa fungera (lägg inte denna kod i Masterpage, då går det inte att se vilka sida användaren 
+varit på)
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126210343-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126210343-1');
+</script>
+
+
+slask html annonser med text:
+            <%--<div style="float:right;margin-right:-160px;margin-top:615px;color:black;background-color:white;font-size:17px;font-family: BlocketSans-Medium;font-weight: 500;width:160px;">Låna till ditt MC-köp</div>--%>
+
+            <%--<div style="float:right;margin-right:-160px;margin-top:615px;" ><b><a href="https://track.adtraction.com/t/t?a=1060519344&as=1640879705&t=2&tk=1" target="_blank"> <br />
+                <img src="../Images/Icons/Lendo%20160.png" /></a></b><img src="https://track.adtraction.com/t/t?a=1060519344&as=1640879705&t=1&tk=1&i=1" width="1" height="1" border="0"/></div>--%>
